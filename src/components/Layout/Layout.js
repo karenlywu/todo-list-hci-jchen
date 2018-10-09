@@ -24,6 +24,7 @@ import loadCharts from 'bundle-loader?lazy!../../pages/charts';
 import loadIcons from 'bundle-loader?lazy!../../pages/icons';
 import loadMaps from 'bundle-loader?lazy!../../pages/google';
 import loadNotFound from 'bundle-loader?lazy!../../pages/notFound';
+import loadTaskList from 'bundle-loader?lazy!../../pages/todo';
 /* eslint-enable */
 
 import s from './Layout.scss';
@@ -45,6 +46,7 @@ const ChartsBundle = Bundle.generateBundle(loadCharts);
 const IconsBundle = Bundle.generateBundle(loadIcons);
 const MapsBundle = Bundle.generateBundle(loadMaps);
 const NotFoundBundle = Bundle.generateBundle(loadNotFound);
+const TaskListBundle = Bundle.generateBundle(loadTaskList);
 
 class Layout extends React.Component {
   constructor(props) {
@@ -81,6 +83,7 @@ class Layout extends React.Component {
               <Route path="/app/components/charts" exact component={ChartsBundle} />
               <Route path="/app/components/icons" exact component={IconsBundle} />
               <Route path="/app/components/maps" exact component={MapsBundle} />
+              <Route path="/app/todo" exact component={TaskListBundle} />
               <Route component={NotFoundBundle} />
             </Switch>
           </main>

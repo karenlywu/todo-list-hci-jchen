@@ -16,7 +16,6 @@ class SimpleBarChart extends PureComponent {
     data: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       uv: PropTypes.number,
-      pv: PropTypes.number,
     })).isRequired,
   }
 
@@ -30,12 +29,10 @@ class SimpleBarChart extends PureComponent {
           margin={{top: 20, left: -10}}>
           <CartesianGrid strokeDasharray="3 3"/>
           <XAxis dataKey="name"/>
-          <YAxis yAxisId="left" orientation="left" stroke="#f3c363"/>
-          <YAxis yAxisId="right" orientation="right" stroke="#eb3349"/>
+          <YAxis yAxisId="left" orientation="left" stroke="#00abff"/>
           <Tooltip/>
           <Legend />
-          <Bar yAxisId="left" dataKey="pv" fill="#f3c363" />
-          <Bar yAxisId="right" dataKey="uv" fill="#eb3349" />
+          <Bar yAxisId="left" dataKey="uv" fill="#00abff" name="Tasks Finished"/>
         </BarChart>
       </ResponsiveContainer>
     );

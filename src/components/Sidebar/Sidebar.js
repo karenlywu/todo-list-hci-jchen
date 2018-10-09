@@ -5,6 +5,7 @@ import {withRouter, Link} from 'react-router-dom';
 
 import Icon from '../Icon';
 import LinksGroup from './LinksGroup/LinksGroup';
+import logo from '../../images/logo.png'
 
 import s from './Sidebar.scss';
 
@@ -12,7 +13,7 @@ const Sidebar = () => (
   <nav className={s.root}>
     <header className={s.logo}>
       <Link to="/app">
-        <Icon glyph="logo" />
+        <img src={require('../../images/logo.png')}/>
       </Link>
     </header>
     <ul className={s.nav}>
@@ -22,38 +23,9 @@ const Sidebar = () => (
         glyph="dashboard"
       />
       <LinksGroup
-        header="Typography"
-        headerLink="/app/typography"
+        header="Todo"
+        headerLink="/app/todo"
         glyph="typography"
-      />
-      <LinksGroup
-        header="Tables Basic"
-        headerLink="/app/tables"
-        glyph="tables"
-      />
-      <LinksGroup
-        header="Notifications"
-        headerLink="/app/notifications"
-        glyph="notifications"
-      />
-      <LinksGroup
-        header="Components"
-        headerLink="/app/components"
-        childrenLinks={[
-          {
-            name: 'Charts',
-            link: '/app/components/charts',
-          },
-          {
-            name: 'Icons',
-            link: '/app/components/icons',
-          },
-          {
-            name: 'Maps',
-            link: '/app/components/maps',
-          },
-        ]}
-        glyph="components"
       />
     </ul>
   </nav>

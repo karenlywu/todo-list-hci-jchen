@@ -62,7 +62,7 @@ class App extends React.PureComponent {
 
   static defaultProps = {
     context: null,
-    isAuthenticated: false,
+    isAuthenticated: true,
   };
 
   static contextTypes = {

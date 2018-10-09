@@ -28,7 +28,7 @@ class Footer extends React.Component {
     return (
       <footer className={cx(s.root, this.props.className)}>
         <div className={s.container}>
-          <span>© 2017 &nbsp;Flatlogic LLC </span>
+          <span>© 2018 &nbsp;CheckYoSelf LLC </span>
           <span className={s.spacer}>·</span>
           <Link to="/app/tos">Terms of Service</Link>
           <span className={s.spacer}>·</span>
